@@ -24,18 +24,17 @@ def fib(n):
 
 #Problem 2
 class vector:
+
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
-
     def getX(self):
         return self.x
 
-
     def getY(self):
         return self.y
-
 
     def add(self, v):
         sum_x = self.x + v.getX()
@@ -43,21 +42,17 @@ class vector:
 
         return print('[{}, {}]'.format(sum_x,sum_y))
 
-
     def mul(self, scalar):
         prod_x = scalar * self.x
         prod_y = scalar * self.y
 
         return print('[{}, {}]'.format(prod_x, prod_y))
-    
 
     def __str__(self):
         return ('[{}, {}]'.format(self.x, self.y))
-        
 
     def __add__(self, v):
         return self.add(v)
-    
 
     def __mul__(self, scalar):
         return self.mul(scalar)
@@ -76,6 +71,32 @@ vector(3.14159, 2.71828183) * 10
 
 
 # Problem 3
-# class Polynomial:
-# yo mama a method how about that
+class Polynomial:
 
+
+    def __init__(self, args):
+        self.a = args[0]
+        self.b = args[1]
+        self.c = args[2]
+    
+    def __str__(self):
+        a = self.a
+        b = self.b
+        c = self.c
+        return print('{} z**2 + {} z + {}'.format(a, b, c))
+    
+    def add(self, poly):
+        sum_a = self.a + poly.a
+        sum_b = self.b + poly.b
+        sum_c = self.c + poly.c
+        return print('{} z**2 + {} z + {}'.format(sum_a, sum_b, sum_c))
+    
+    def __add__(self, poly):
+        return self.add(poly)
+
+# follow the lab manual, didnt even know they had that. Just scroll down
+
+a = Polynomial([1, 2, 3])
+b = Polynomial([3, 2, 1])
+a.add(b)
+a + b
