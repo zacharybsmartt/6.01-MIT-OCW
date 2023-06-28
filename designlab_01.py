@@ -77,5 +77,5 @@ vector(3.14159, 2.71828183) * 10
 
 # Problem 3
 # class Polynomial:
-
+# yo mama a method how about that
 
