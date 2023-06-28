@@ -28,19 +28,54 @@ class vector:
         self.x = x
         self.y = y
 
-    def getX(self): 
+
+    def getX(self):
         return self.x
+
 
     def getY(self):
         return self.y
 
+
     def add(self, v):
+        sum_x = self.x + v.getX()
+        sum_y = self.y + v.getY()
+
+        return print('[{}, {}]'.format(sum_x,sum_y))
+
+
+    def mul(self, scalar):
+        prod_x = scalar * self.x
+        prod_y = scalar * self.y
+
+        return print('[{}, {}]'.format(prod_x, prod_y))
+    
+
+    def __str__(self):
+        return ('[{}, {}]'.format(self.x, self.y))
         
-        
+
+    def __add__(self, v):
+        return self.add(v)
+    
+
+    def __mul__(self, scalar):
+        return self.mul(scalar)
+
+
+v = vector(1.1, 2.2)
+b = vector(4, 1)
+
+print(v)
+v.add(b)
+b.mul(8)
+
+vector(2, 2) + vector(2,2)
+vector(3.14159, 2.71828183) * 10
 
 
 
+# Problem 3
+# class Polynomial:
 
-
-v = vector(11, 12)
 
