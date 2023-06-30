@@ -74,29 +74,36 @@ vector(3.14159, 2.71828183) * 10
 class Polynomial:
 
 
-    def __init__(self, args):
-        self.a = args[0]
-        self.b = args[1]
-        self.c = args[2]
-    
-    def __str__(self):
-        a = self.a
-        b = self.b
-        c = self.c
-        return print('{} z**2 + {} z + {}'.format(a, b, c))
-    
-    def add(self, poly):
-        sum_a = self.a + poly.a
-        sum_b = self.b + poly.b
-        sum_c = self.c + poly.c
-        return print('{} z**2 + {} z + {}'.format(sum_a, sum_b, sum_c))
-    
-    def __add__(self, poly):
-        return self.add(poly)
+    def __init__(self, coefficients):
+        self.coefficients = coefficients
 
-# follow the lab manual, didnt even know they had that. Just scroll down
 
-a = Polynomial([1, 2, 3])
-b = Polynomial([3, 2, 1])
+    def coef(self, i):
+        print(self.coefficients[::-1][i])
+        return self.coefficients[::-1][i]
+    
+    def add(self, other):
+        print(self.coefficients)
+        print(len(self.coefficients))
+        print(other.coefficients)
+        print(len(other.coefficients))
+        if len(self.coefficients) < len(other.coefficients):
+            while len(self.coefficients) < len(other.coefficients):
+                self.coefficients.append(0)
+                coef_sum = [self.coefficients[i] + other.coefficients[i] for i in enumerate(self.coefficients)]
+                print(coef_sum)
+                return coef_sum
+    
+        elif len(self.coefficients) > len(other.coefficients):
+            while len(self.coefficients) > len(other.coefficients):
+                other.coefficients.append(0)
+                coef_sum = [self.coefficients[i] + other.coefficients[i] for i in enumerate(self.coefficients)]
+                print(coef_sum)
+                return coef_sum
+
+
+a = Polynomial([6, 4, 2, 1])
+b = Polynomial([1, 2, 4])
+a.coef(3)
 a.add(b)
-a + b
+
