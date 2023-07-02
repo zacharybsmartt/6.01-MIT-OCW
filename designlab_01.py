@@ -113,3 +113,4 @@ a = Polynomial([6, 4, 2, 1])
 b = Polynomial([1, 2, 4])
 a.coef(3)
 a.add(b)
+a + b
