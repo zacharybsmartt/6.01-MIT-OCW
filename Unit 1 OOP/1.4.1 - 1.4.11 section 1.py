@@ -55,5 +55,5 @@ isPalindrome("racecar")
 
 # 1.4.8 substring optional
 def isSubstring(str1, str2):
-    
+    return True # to be fixed later
 
