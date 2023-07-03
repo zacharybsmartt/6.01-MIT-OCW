@@ -1,4 +1,3 @@
-
 # #Problem 1
 # def fib(n):
 #     n1, n2 = 0, 1
@@ -77,33 +76,42 @@ class Polynomial:
     def __init__(self, coefficients):
         self.coefficients = coefficients
 
-
     def coef(self, i):
         print(self.coefficients[::-1][i])
         return self.coefficients[::-1][i]
     
     def add(self, other):
-        print(self.coefficients)
-        print(len(self.coefficients))
-        print(other.coefficients)
-        print(len(other.coefficients))
-        if len(self.coefficients) < len(other.coefficients):
-            while len(self.coefficients) < len(other.coefficients):
-                self.coefficients.append(0)
-                coef_sum = [self.coefficients[i] + other.coefficients[i] for i in enumerate(self.coefficients)]
-                print(coef_sum)
-                return coef_sum
+        
+        P1 = self.coefficients.copy()
+        P2 = other.coefficients.copy()
+
+        if len(P1) > len(P2):
+            while len(P2) < len(P1):
+                (P2).append(0)
+
+            coeff_sum = [sum(x) for x in zip(P1, P2)]
+            print(coeff_sum)
+            return coeff_sum
     
-        elif len(self.coefficients) > len(other.coefficients):
-            while len(self.coefficients) > len(other.coefficients):
-                other.coefficients.append(0)
-                coef_sum = [self.coefficients[i] + other.coefficients[i] for i in enumerate(self.coefficients)]
-                print(coef_sum)
-                return coef_sum
+        elif len(P1) < len(P2):
+            while len(P2) > len(P1):
+                (P1).append(0)
 
+            coeff_sum = [sum(x) for x in zip(P1, P2)]
+            print(coeff_sum)
+            return coeff_sum
+    
+        else:
+            coeff_sum = [sum(x) for x in zip(P1, P2)]
+            print(coeff_sum)
+            return coeff_sum
 
-a = Polynomial([6, 4, 2, 1])
-b = Polynomial([1, 2, 4])
+    # def mul(self, other):
+        
+
+a = Polynomial([6, 4, 2, 1, 4, 6, 7, 4, 2])
+b = Polynomial([1, 5, 7, 7])
 a.coef(3)
 a.add(b)
-a + b
+
+# VHP compatability
