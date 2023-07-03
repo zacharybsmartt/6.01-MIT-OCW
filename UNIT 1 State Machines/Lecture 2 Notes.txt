@@ -1,0 +1,14 @@
+P, C, A, P = Primitives, Abstracts, Combinations, Patterns
+
+Imperative code
+    - recipe like, procedural
+
+Functional
+    - focus on procedures that mimic mathematical functions
+    - Functions that eat inputs, generate outputs, and produce no side effects
+
+Object Oriented
+    - focus on collections of related procedures
+    - organize programs in relation to hiererchies or related classes and instances
+
+22:25 
