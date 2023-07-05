@@ -57,3 +57,12 @@ isPalindrome("racecar")
 def isSubstring(str1, str2):
     return True # to be fixed later
 
+
+linkedlist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+forw = 0
+backw = -1
+for node in linkedlist:
+    node[forw], node[backw] = node[backw], node[forw]
+    forw += 1
+    backw -= 1
+

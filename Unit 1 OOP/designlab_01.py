@@ -62,9 +62,7 @@ v = vector(1.1, 2.2)
 b = vector(4, 1)
 
 print(v)
-v.add(b)
 b.mul(8)
-
 vector(2, 2) + vector(2,2)
 vector(3.14159, 2.71828183) * 10
 
