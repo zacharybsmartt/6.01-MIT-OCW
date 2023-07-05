@@ -11,4 +11,18 @@ Object Oriented
     - focus on collections of related procedures
     - organize programs in relation to hiererchies or related classes and instances
 
-22:25 
+22:25
+
+def apply(oplist, arg):
+    if len(oplist) == 0:
+        return arg
+    
+    else: 
+        return apply(oplist[1:}, oplist{0}](arg))
+
+This is a recursive function ^ (remember to have a base condition with recursive functions "a simple base case you know the answer to")
+
+OOP can solve the increment square problem with a binary tree class where options are square and increment and a node has a parent, 
+answer, and action
+
+
