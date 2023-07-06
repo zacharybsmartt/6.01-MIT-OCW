@@ -11,7 +11,7 @@ Object Oriented
     - focus on collections of related procedures
     - organize programs in relation to hiererchies or related classes and instances
 
-22:25
+1:00:31
 
 def apply(oplist, arg):
     if len(oplist) == 0:
