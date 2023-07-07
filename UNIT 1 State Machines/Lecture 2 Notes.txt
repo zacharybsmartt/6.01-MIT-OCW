@@ -25,4 +25,29 @@ This is a recursive function ^ (remember to have a base condition with recursive
 OOP can solve the increment square problem with a binary tree class where options are square and increment and a node has a parent, 
 answer, and action
 
+State Machine class
+
+class SM:
+    def start(self):
+        self.state = self.startState 
+
+    def step(self, inp):
+        (s, o) = self.getNextValues(self.state,inp)
+        self.state = s
+        return o
+
+    def transduc(self, inputs):
+        self.start()
+        return [self.step(inp) for inp in inputs]
+
+#then we can use inherticance to sprcify the kind of state machine we are working with
+
+class Turnstile(SM):
+    startState = 'locked'
+
+    def getNextValues(self, state, inp):
+        if inp == 'coin':
+            retur ('unlocked', 'enter')
+ETC ETC ETC ETC ETC ETC ETC
+
 
