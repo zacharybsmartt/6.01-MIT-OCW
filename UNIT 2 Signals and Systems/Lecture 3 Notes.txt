@@ -1,0 +1,4 @@
+We want to think of behavior in terms of signals ad plots.
+Quantify performanec by characterizing input and output signals
+
+
